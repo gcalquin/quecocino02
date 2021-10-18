@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Time</th>
+      <th>Calories</th>
+      <th>Persons</th>
+      <th>Description</th>
+      <th>Count</th>
+      <th>Note</th>
+      <th>Photo url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.category_id %></td>
+        <td><%= menu.name %></td>
+        <td><%= menu.time %></td>
+        <td><%= menu.calories %></td>
+        <td><%= menu.persons %></td>
+        <td><%= menu.description %></td>
+        <td><%= menu.count %></td>
+        <td><%= menu.note %></td>
+        <td><%= menu.photo_url %></td>
+        <td><%= link_to 'Show', menu %></td>
+        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Menu', new_menu_path %>

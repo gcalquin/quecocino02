@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @menu.category_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @menu.name %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @menu.time %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @menu.calories %>
+</p>
+
+<p>
+  <strong>Persons:</strong>
+  <%= @menu.persons %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @menu.description %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @menu.count %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @menu.note %>
+</p>
+
+<p>
+  <strong>Photo url:</strong>
+  <%= @menu.photo_url %>
+</p>
+
+<%= link_to 'Edit', edit_menu_path(@menu) %> |
+<%= link_to 'Back', menus_path %>

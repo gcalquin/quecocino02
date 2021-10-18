@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :menus
+  resources :ingredients
+  resources :users
   resources :categories
   get 'home/index'
 
